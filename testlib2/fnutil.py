@@ -39,3 +39,18 @@ def promap(before,after,fn):
     return map(after,contramap(before,fn))
 
 
+@curry
+def memoizer(is_full,contains,popitem,update,lookup,fn,x):
+    if not contains(x):
+        if is_full(): popitem()
+        update(x,fn(x))
+    return lookup(x)
+
+
+def generator(fn):
+    @ft.wraps(fn)
+    def wrapper(*args,**kwargs):
+        generate = fn(*args,**kwargs)
+        next(generate)
+        return generate
+    return wrapper

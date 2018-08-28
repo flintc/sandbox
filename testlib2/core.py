@@ -160,6 +160,7 @@ def iteratee(value):
 def times(n,i):
     return [iteratee(i)]*n
 
+
 @curry
 def partition(pred, iterable):
     'Use a predicate to partition entries into false entries and true entries'
