@@ -1,0 +1,55 @@
+
+GraphObjects:
+  Scattergl:
+    mode: 'markers'
+    marker:
+      colorscale: 'Viridis'
+      showscale: True
+      opacity: 0.75
+      size: 25
+      line:
+        width: 2
+  Scatter3d:
+    mode: 'markers'
+    marker:
+      colorscale: 'Viridis'
+      showscale: True
+      opacity: 0.75
+      size: 10
+
+Layouts:
+  Scattergl:
+    barmode: 'overlay'
+    paper_bgcolor: 'rgba(50,50,50,0)'
+    plot_bgcolor: 'rgba(50,50,50,0)'
+    xaxis:
+      color: 'rgb(.5,.5,.5)'
+      tickcolor: 'rgb(.5,.5,.5)'
+      gridcolor: 'rgb(.5,.5,.5)'
+    yaxis:
+      color: 'rgb(.5,.5,.5)'
+      tickcolor: 'rgb(.5,.5,.5)'
+      gridcolor: 'rgb(.5,.5,.5)'
+  Scatter3d:
+    barmode: 'overlay'
+    paper_bgcolor: 'rgba(50,50,50,0)'
+    plot_bgcolor: 'rgba(50,50,50,0)'
+    xaxis:
+      color: 'rgb(.5,.5,.5)'
+      tickcolor: 'rgb(.5,.5,.5)'
+      gridcolor: 'rgb(.5,.5,.5)'
+    yaxis:
+      color: 'rgb(.5,.5,.5)'
+      tickcolor: 'rgb(.5,.5,.5)'
+      gridcolor: 'rgb(.5,.5,.5)'
+    zaxis:
+      color: 'rgb(.5,.5,.5)'
+      tickcolor: 'rgb(.5,.5,.5)'
+      gridcolor: 'rgb(.5,.5,.5)'
+    scene:
+      xaxis:
+        spikecolor: 'red'
+      yaxis:
+        spikecolor: 'green'
+      zaxis:
+        spikecolor: 'blue'
