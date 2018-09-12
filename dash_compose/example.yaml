@@ -1,0 +1,39 @@
+
+flask-app:
+  host: localhost
+  port: 5000
+  route:
+    boo/<foo>:
+      response:
+        records:
+          id: str
+          name: str
+          x: []
+          y: []
+          color: str
+
+
+variables:
+  dummy_graph:
+    dcc.Graph:
+      id: 'graph-1'
+      figure:
+        data: 
+          - x: np.random.rand(10)
+            y: np.random.rand(10)
+        layout:
+          plot_bgcolor: 'grey'
+        type: scatter
+
+
+dash-app:
+  layout:
+    row:
+      children:
+        - col('md','6'):
+            children:
+              - dummy_graph
+        - col('md','6'):
+            children:
+              - dummy_graph
+
