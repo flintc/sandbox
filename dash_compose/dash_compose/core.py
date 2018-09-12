@@ -158,12 +158,19 @@ def make_graph(global_config):
     # else:
         return dcc.Graph(**merge_deep_concat( *[factory_eval(factory,config) for factory,config in global_config.items()] ))
 
-def col(config,spec='md'):
-    return lambda: html.Div(children=[make_graph(config)],className='col-'+spec)
+# def col(config,spec='md'):
+#     return lambda: html.Div(children=[make_graph(config)],className='col-'+spec)
 
-def row(items):
-    return html.Div(children=[ resolve() for resolve in items ], className='row')
+# def row(items):
+#     return html.Div(children=[ resolve() for resolve in items ], className='row')
 
+def row(*args,**kwargs):
+    return html.Div(*args,className='row',**kwargs)
+
+def col(*class_names):
+    def wrapper(*args,**kwargs):
+        return html.Div(*args,className='-'.join(['col',*class_names]),**kwargs)
+    return wrapper
 
 
 
